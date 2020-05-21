@@ -70,7 +70,7 @@ open class Animator: NSObject
     {
         guard _displayLink != nil else { return }
 
-        _displayLink?.remove(from: .main, forMode: RunLoop.Mode.common)
+      _displayLink?.remove(from: .main, forMode: RunLoop.Mode.common)
         _displayLink = nil
 
         _enabledX = false
@@ -165,7 +165,7 @@ open class Animator: NSObject
         if _enabledX || _enabledY
         {
             _displayLink = NSUIDisplayLink(target: self, selector: #selector(animationLoop))
-            _displayLink?.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
+          _displayLink?.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
         }
     }
     
@@ -229,7 +229,7 @@ open class Animator: NSObject
             _displayLink == nil
         {
             _displayLink = NSUIDisplayLink(target: self, selector: #selector(animationLoop))
-            _displayLink?.add(to: .main, forMode: RunLoop.Mode.common)
+          _displayLink?.add(to: .main, forMode: RunLoop.Mode.common)
         }
     }
     
@@ -267,7 +267,7 @@ open class Animator: NSObject
             _displayLink == nil
         {
             _displayLink = NSUIDisplayLink(target: self, selector: #selector(animationLoop))
-            _displayLink?.add(to: .main, forMode: RunLoop.Mode.common)
+          _displayLink?.add(to: .main, forMode: RunLoop.Mode.common)
         }
     }
     
